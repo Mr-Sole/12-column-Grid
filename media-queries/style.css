@@ -1,0 +1,96 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+ body {
+    margin: 0;
+    font-family: "raleway", serif;
+    background: purple;
+    color: white;
+ }
+
+ .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+ }
+
+ header {
+    padding: 20px 40px;
+    background-color: grey;
+    align-items: center;
+ }
+
+ header h1 {
+    grid-column: span 6;
+ }
+
+ header nav {
+    grid-column: 7/span6 6;
+    justify-self: right;
+ }
+
+ header nav a {
+    text-decoration: none;
+    color: springgreen;
+    margin-left: 15px;
+ }
+
+ main {
+    padding: 20px;
+    margin: 60px auto;
+    max-width: 1200px;
+}
+ 
+main img {
+    grid-column: span 6;
+    width: 100%;
+}
+ 
+main .welcome {
+    grid-column: 8/ span 5;
+    text-align: center;
+}
+ 
+main h3 {
+    grid-column: span 12;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+ 
+main .card {
+    text-align: center;
+    grid-column: span 4;
+    background: #24282c;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1100px) {
+    main img {
+        grid-column: 2 / span 10;
+    }
+
+    main .welcome {
+        grid-column: 3/ span 8;
+    }
+
+    main .card {
+        grid-column: 3 / span 8;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        padding: 20px 0px;
+    }
+
+    header h1 {
+        text-align: center;
+        grid-column: span 12;
+        margin: 0;
+    }
+
+    header nav {
+        
+    }
+}
